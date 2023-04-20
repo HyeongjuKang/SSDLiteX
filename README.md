@@ -23,6 +23,7 @@ SSDLite uses a box size of {0.2, 0.35, 0.5, 0.65, 0.8, 0.95} for MS COCO data se
 			and Type 2 for the others.
 
 | Type		| (Size, Aspect Ratio) 				|
+|----		|---								|
 | Type 1	| (1,1) (sq 2,1) (1,2) (1,1/2)		|
 | Type 2	| (1,1) (sq 2,1) (1,2) (1,1/2) (1,3) (1,1/3)	|
 | Type 3	| (1/2,1) (1,2) (1,1/2)				|
