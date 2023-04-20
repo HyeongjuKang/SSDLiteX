@@ -28,3 +28,62 @@ SSDLite uses a box size of {0.2, 0.35, 0.5, 0.65, 0.8, 0.95} for MS COCO data se
 | Type 2	| (1,1) (sq 2,1) (1,2) (1,1/2) (1,3) (1,1/3)	|
 | Type 3	| (1/2,1) (1,2) (1,1/2)				|
 
+### 1.2. Scale of Detection Layers
+SSD uses the following scale feature maps for the box generation:
+	1/8, 1/16, 1/32, 1/64, 1/128, and 1/256.
+1/8 and 1/16 are extracted from the base CNN,
+	and the others are from the auxiliary layers.
+The final scale of the base CNN is modified from 1/32 to 1/16.
+SSDLite uses 1/16, 1/32, 1/64, 1/128, 1/256, and 1/512 scale
+	featuremaps for the box generation.
+The scale of the base CNN is not modified.
+And the output channel number of the last auxiliary layer
+	is 256 in SSD and 128 in SSDLite.
+
+### 1.3. Size Reduction
+In SSD, if size reduction by 1/2 is equal to reduction by 2
+	(ex. from 5x5 to 3x3), 
+	3x3 convolution without padding is applied
+		instead of strided convolution.
+SSDLite always reduces the feature map size by strided convolution.
+
+In some reserch, pooling is used instead of strided convoluiton.
+
+### 1.4. Convolutional Layer for Fully-Connected Layer
+SSD substitutes the fully connected layers in the base CNN
+	with 3x3 convolutional layer (fc6) and 1x1 convolutional layer.
+Furthermore, fc6 uses dilation of 6.
+SSDLite does not use such layers.
+
+## 2. Experimental Results
+
+### 2.1. Configurations
+We compared the MS COCO AP for the following configurations.
+
+| Variations			| C0 | C1 | C2 | C3 | C4 | C5 |
+|----					|--- |--- |--- |--- |--- |--- |
+| Base: SSDLite			| O  | O  | O  | O  | O  | O  |
+| SSD-like Prior Box	|    | O  | O  | O  | O  | O  |
+| Scale 1/8				|    | O  | O  | O  | O  | O  |
+| Reduction by no-pad	|    |    | O  | O  | O  | O  |
+| 256 channels on last	|    |    | O  | O  | O  | O  |
+| Pooling				|    |    |    | O  | O  | O  |
+| fc6					|    |    |    |    | O  | O  |
+| Less 1x1				|    |    |    |    |    | O  |
+
+Variations
+* SSD-like Prior Box: To use Type 1 and Type 2 like SSD
+* Scale 1/8: Using 1/8 to 1/256 scale feature maps. The scale of the base CNN
+		is not modified.
+* Reduction by no-pad: To reducd the feature map size by no-padding convoluion
+		if applicable.
+* 256 channels on last: 256 channel output on the last auxiliary layer
+* Pooling: To use max pooling instead of strided convolution
+* fc6: fc6 between the base CNN layers and the auxiliary layers.
+		fc7 is not used. fc6 is decomposed to depthwise and pointwise.
+		Dilation is set to 1.
+* Less 1x1: To use a 1x1 convolution per auxiliary stage
+
+
+### 2.2. Results
+
