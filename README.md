@@ -55,6 +55,26 @@ SSD substitutes the fully connected layers in the base CNN
 Furthermore, fc6 uses dilation of 6.
 SSDLite does not use such layers.
 
+### 1.5. Duplicated 1x1 Convolution
+SSD auxiliary part consists of a few auxiliary stage,
+	which has a 1x1 convolutional layer and a 3x3 convolutional layer.
+SSDLite decomposes the 3x3 convolutional layer to 3x3 depthwise and 1x1 pointwise.
+Therefore, an auxiliary stage consists of 1x1, 3x3 depthwise, and 1x1 convolution.
+The number of channels is reduced by the first 1x1 and expaned by the last 1x1.
+This constitution does not match the concepth of the MobileNet V2,
+	whose basic block consists of expansion, depthwise, and projection.
+It may be better to remove the first 1x1 convoluiton of channel reduction 
+	in SSDLite.
+
+### 1.6. More 1/8 Layers on MobileNetV2
+MobileNetV2 has three bottleneck stages with 1/8 scale feature maps
+	(1/4 scale to 1/8 scale at the first of the three stages)
+	and seven bottleneck stage with 1/16 scale.
+The last 1/8 scale feature maps, which will be used for box generation,
+	may not have enough semantic information.
+The scale down can be applied later
+	so that seven stages with 1/8 scale and three stages with 1/16 scale.
+
 ## 2. Experimental Results
 
 ### 2.1. Configurations
@@ -84,6 +104,10 @@ Variations
 		Dilation is set to 1.
 * Less 1x1: To use a 1x1 convolution per auxiliary stage
 
+### 2.2. Results for MobileNetV2
+The experiments are performed with two versions of MobileNetV2:
+	the original one and the one with more 1/8 layers.
 
-### 2.2. Results
+![Weight amounts vs. MS COCO AP](ssdlitex_weights.png)
+![FLOPS vs. MS COCO AP](ssdlitex_flops.png)
 
