@@ -7,7 +7,18 @@ In SSDLiteX, the difference is discussed,
 	and better model will be suggested.
 
 ## Citing SSDLiteX
-On preparing for the publication
+Please cite SSDLiteX in your publications if it helps your research:
+
+	@article{hjkang2023ssdlitex,
+		author = {Kang, Hyeong-Ju},
+		title = {Accelerator-Aware Pruning for Convolutional Neural Networks},
+		journal = {IEEE Transactions on Circuits and Systems for Video Technology},
+		volume = {30},
+		number = {7},
+		pages = {2093--2103},
+		month = {July},
+		year = {2020}
+	}
 
 ## 1. Comparing SSD and SSDLite
 
