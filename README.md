@@ -11,13 +11,13 @@ Please cite SSDLiteX in your publications if it helps your research:
 
 	@article{hjkang2023ssdlitex,
 		author = {Kang, Hyeong-Ju},
-		title = {Accelerator-Aware Pruning for Convolutional Neural Networks},
-		journal = {IEEE Transactions on Circuits and Systems for Video Technology},
-		volume = {30},
-		number = {7},
-		pages = {2093--2103},
-		month = {July},
-		year = {2020}
+		title = {SSDLiteX: Enhancing SSDLite for Small Object Detection},
+		journal = {Applied Sciences}, 
+		volume = {13},
+		number = {21},
+		pages = {12001},
+		month = {Nov},
+		year = {2023}
 	}
 
 ## 1. Comparing SSD and SSDLite
