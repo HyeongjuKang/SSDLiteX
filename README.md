@@ -119,6 +119,6 @@ Variations
 The experiments are performed with two versions of MobileNetV2:
 	the original one and the one with more 1/8 layers.
 
-![Weight amounts vs. MS COCO AP](ssdlitex_weights.png=300x)
+![alt Weight amounts vs. MS COCO AP](ssdlitex_weights.png){height=300,width=300}
 ![FLOPS vs. MS COCO AP](ssdlitex_flops.png)
 
