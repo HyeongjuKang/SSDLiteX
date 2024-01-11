@@ -131,6 +131,7 @@ FLOPS vs. MS COCO AP
 The SSDLiteX CNNs were implemented in caffe.
 
 
+|----		|--- |--- |
 |org ssdlitex0| [prototxt](prototxt/mobile2_org_320_ssdlitex0.prototxt) |
 	[caffemodel](https://drive.google.com/file/d/1TQxOcmxt_5kJ922G-C6tqo40KWEhzFAb/view?usp=share_link) |
 
