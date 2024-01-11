@@ -120,8 +120,11 @@ The experiments are performed with two versions of MobileNetV2:
 	the original one and the one with more 1/8 layers.
 
 Weight amounts vs. MS COCO AP
+
 <img src="ssdlitex_weights.png" width="450">
 
 FLOPS vs. MS COCO AP
+
 <img src="ssdlitex_flops.png" width="450">
+
 
