@@ -133,5 +133,16 @@ The SSDLiteX CNNs were implemented in caffe.
 |Networks	| prototxt	| caffemodel	|
 |----		|--- 		|--- 			|
 |org ssdlitex0| [prototxt](prototxt/mobile2_org_320_ssdlitex0.prototxt) | [caffemodel](https://drive.google.com/file/d/1TQxOcmxt_5kJ922G-C6tqo40KWEhzFAb/view?usp=share_link) |
+|org ssdlitex1| [prototxt](prototxt/mobile2_org_320_ssdlitex1.prototxt) | [caffemodel](https://drive.google.com/file/d/1Cuzd4H-UQv4UWlDemRIEeQIUMJftzzg0/view?usp=share_link) |
+|org ssdlitex2| [prototxt](prototxt/mobile2_org_320_ssdlitex2.prototxt) | [caffemodel](https://drive.google.com/file/d/10NhV_ZLk1_NwhsIvpE7TTjqXv_PxW0jx/view?usp=share_link) |
+|org ssdlitex3| [prototxt](prototxt/mobile2_org_320_ssdlitex3.prototxt) | [caffemodel](https://drive.google.com/file/d/1I8l_J-TeRUwkAsKvvOmSmHGUqxV2UrsY/view?usp=share_link) |
+|org ssdlitex4| [prototxt](prototxt/mobile2_org_320_ssdlitex4.prototxt) | [caffemodel](https://drive.google.com/file/d/1I8l_J-TeRUwkAsKvvOmSmHGUqxV2UrsY/view?usp=share_link) |
+|org ssdlitex5| [prototxt](prototxt/mobile2_org_320_ssdlitex5.prototxt) | [caffemodel](https://drive.google.com/file/d/1PnNxN9CRUidOmBSFaJMghWEjjYBJWRrt/view?usp=share_link) |
+|more 1/8 ssdlitex0| [prototxt](prototxt/mobile2_s32_320_ssdlitex0.prototxt) | [caffemodel](https://drive.google.com/file/d/1GMLZScvMjiMV1UZ73fj8laxNUDAtWAdf/view?usp=share_link) |
+|more 1/8 ssdlitex1| [prototxt](prototxt/mobile2_s32_320_ssdlitex1.prototxt) | [caffemodel](https://drive.google.com/file/d/1vn-86Oy41Cjan7t3BLmAZS7klUP5Gj8c/view?usp=share_link) |
+|more 1/8 ssdlitex2| [prototxt](prototxt/mobile2_s32_320_ssdlitex2.prototxt) | [caffemodel](https://drive.google.com/file/d/1rM0NcU4ulSZN9VwZ9QnbZ9Dukw_5l-vE/view?usp=share_link) |
+|more 1/8 ssdlitex3| [prototxt](prototxt/mobile2_s32_320_ssdlitex3.prototxt) | [caffemodel](https://drive.google.com/file/d/1pvKOlQpA35yhWb6XXYnj-GFZlTWVykOc/view?usp=share_link) |
+|more 1/8 ssdlitex4| [prototxt](prototxt/mobile2_s32_320_ssdlitex4.prototxt) | [caffemodel](https://drive.google.com/file/d/1tYYCBYmJhrLmDm1NPSe8CJjf0uXx2_IA/view?usp=share_link) |
+|more 1/8 ssdlitex5| [prototxt](prototxt/mobile2_s32_320_ssdlitex5.prototxt) | [caffemodel](https://drive.google.com/file/d/1YU6RWnMdL2IYmV2Tr5kV5svk4z5nz0oP/view?usp=share_link) |
 
 
