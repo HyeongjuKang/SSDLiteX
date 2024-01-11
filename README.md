@@ -127,4 +127,9 @@ FLOPS vs. MS COCO AP
 
 <img src="ssdlitex_flops.png" width="450">
 
+### 2.3. Prototxt and caffemodel
+The SSDLiteX CNNs were implemented in caffe.
+ |org ssdlitex0| [prototxt](prototxt/mobile2_org_320_ssdlitex0.prototxt) |
+	[caffemodel](https://drive.google.com/file/d/1TQxOcmxt_5kJ922G-C6tqo40KWEhzFAb/view?usp=share_link) |
+
 
